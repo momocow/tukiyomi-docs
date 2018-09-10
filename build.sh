@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-bash ./blog/build.sh
+cd blog
+bash ./build.sh

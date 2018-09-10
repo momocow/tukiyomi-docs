@@ -7,4 +7,5 @@ rm -rf ./themes/$theme/templates/custom
 cp -R ./custom/$theme ./themes/$theme/templates/custom
 
 veripress generate --app-root=/blog
+mkdir -p ../www/blog
 cp -r _deploy/* ../www/blog
