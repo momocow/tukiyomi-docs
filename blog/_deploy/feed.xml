@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">月夜海</title>
-  <id>https://tukiyomi.tw/feed.xml</id>
-  <updated>2018-09-10T11:54:51+08:00</updated>
-  <link href="https://tukiyomi.tw" />
-  <link href="https://tukiyomi.tw/feed.xml" rel="self" />
+  <id>https://tukiyomi.tw/blog/feed.xml</id>
+  <updated>2018-09-10T23:00:00+08:00</updated>
+  <link href="https://tukiyomi.tw/blog" />
+  <link href="https://tukiyomi.tw/blog/feed.xml" rel="self" />
   <author>
     <name>MomoCow</name>
   </author>
-  <subtitle type="text">又。一個可擴展的 KanColle 專屬瀏覽器。</subtitle>
+  <subtitle type="text">忘れない。忘れない。ずっと。</subtitle>
   <generator>Werkzeug</generator>
-  <entry xml:base="https://tukiyomi.tw/feed.xml">
-    <title type="text">Hello, world!</title>
+  <entry xml:base="https://tukiyomi.tw/blog/feed.xml">
+    <title type="text">Hello, TukiYomi!</title>
     <id>/post/2018/09/10/hello-world/</id>
-    <updated>2018-09-10T11:54:51+08:00</updated>
+    <updated>2018-09-10T23:00:00+08:00</updated>
     <published>2018-09-10T11:54:51+08:00</published>
-    <link href="https://tukiyomi.tw/post/2018/09/10/hello-world/" />
+    <link href="https://tukiyomi.tw/blog/post/2018/09/10/hello-world/" />
     <author>
       <name>MomoCow</name>
     </author>
-    <content type="html">&lt;p&gt;This is the hello world post!&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;又。一個可擴展的 KanColle 專屬瀏覽器。&lt;/p&gt;
+&lt;p&gt;🚧 WIP 🚧 前方施工 🚧&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;WIP&quot; src=&quot;https://thumbs.gfycat.com/SpicyImmenseGraywolf-size_restricted.gif&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;特色&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; + &lt;a href=&quot;https://www.typescriptlang.org&quot;&gt;Typescript&lt;/a&gt; + &lt;a href=&quot;https://electronjs.org/&quot;&gt;Electron&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WebM 戰鬥紀錄 (未來可能支援影像串流)&lt;/li&gt;
+&lt;li&gt;作者是條牛 🐄&lt;/li&gt;
+&lt;li&gt;作者是條牛 🐄&lt;/li&gt;
+&lt;li&gt;作者是條牛 🐄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;歡迎 PR 🙏&lt;/h2&gt;
+&lt;h2&gt;Slack交流頻道&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://tuki-yomi.slack.com/messages/CCBG49A07&quot;&gt;Tukiyomi@Slack&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;歡迎餵食 ☕&lt;/h2&gt;
+&lt;p&gt;請勿拍打 🤜 無限期掙飯中 🍙&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.buymeacoffee.com/momocow&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png&quot; alt=&quot;Buy Me A Coffee&quot; style=&quot;height: auto !important;width: auto !important;&quot; &gt;&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

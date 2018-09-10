@@ -1,0 +1,26 @@
+<style>
+  .column {
+    position: relative;
+  }
+  .tukiyomi-title {
+    position: relative;
+    left: 100px;
+  }
+  .tukiyomi-logo {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+  }
+</style>
+
+<div class="row site-title">
+  <div class="column">
+    <div class="tukiyomi-logo">
+      <a href="/">{% include 'logo.html' %}</a>
+    </div>
+    <div class="tukiyomi-title">
+      <h1><a href="{{ url_for('.index') }}">{{ site.title }}</a></h1>
+      <h2>{{ site.subtitle }}</h2>
+    </div>
+  </div>
+</div>

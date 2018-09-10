@@ -7,21 +7,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta http-equiv="cleartype" content="on">
-<link rel="alternate" type="application/atom+xml" title="月夜海" href="/feed.xml"/>
+<link rel="alternate" type="application/atom+xml" title="月夜海" href="/blog/feed.xml"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
 
 <!-- Link common CSS and JavaScript files -->
-<link href="/static/css/style.css" rel="stylesheet">
-<link href="/static/css/highlight.css" rel="stylesheet">
+<link href="/blog/static/css/style.css" rel="stylesheet">
+<link href="/blog/static/css/highlight.css" rel="stylesheet">
 
 <!-- Set favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/static/favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/static/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/static/favicons/manifest.json">
-<link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/static/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/blog/static/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/blog/static/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/blog/static/favicons/manifest.json">
+<link rel="mask-icon" href="/blog/static/favicons/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
-<link rel="shortcut icon" type="image/x-icon" href="/static/favicons/favicon.ico"> 
+<link rel="shortcut icon" type="image/x-icon" href="/blog/static/favicons/favicon.ico"> 
   <title>Hello - Tag - 月夜海</title>
 
 </head>
@@ -30,10 +30,30 @@
 
 <div class="container">
   <header class="row header">
-    <div class="row site-title">
+    <style>
+  .column {
+    position: relative;
+  }
+  .tukiyomi-title {
+    position: relative;
+    left: 100px;
+  }
+  .tukiyomi-logo {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+  }
+</style>
+
+<div class="row site-title">
   <div class="column">
-    <h1><a href="/">月夜海</a></h1>
-    <h2>又。一個可擴展的 KanColle 專屬瀏覽器。</h2>
+    <div class="tukiyomi-logo">
+      <a href="/"><img src="/blog/static/logo.png" alt="Logo"></a>
+    </div>
+    <div class="tukiyomi-title">
+      <h1><a href="/blog/">月夜海</a></h1>
+      <h2>忘れない。忘れない。ずっと。</h2>
+    </div>
   </div>
 </div>
   </header>
@@ -54,7 +74,7 @@
               <td style="font-size: 85%">
                 <time>2018.09.10</time>
               </td>
-              <td><a href="/post/2018/09/10/hello-world/">Hello, world!</a></td>
+              <td><a href="/blog/post/2018/09/10/hello-world/">Hello, TukiYomi!</a></td>
             </tr>
           
           </tbody>
@@ -69,11 +89,18 @@
       <aside class="column sidebar">
         <div class="sidebar-widgets">
   <div class="widget">
-    <h4>导航</h4>
+    <h4>任意門</h4>
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-<li><a href="/archive/">Archive</a></li>
+        <li><a href="/blog/">主頁面</a></li>
+<li><a href="/blog/archive/">文章列表</a></li>
+<li>
+  <a href="https://github.com/momocow/tukiyomi">
+    GitHub
+    <img style="position: relative;top: 4px;" height="21" width="21" src="https://unpkg.com/simple-icons@latest/icons/github.svg" />
+  </a>
+</li>
+<li><a href="https://github.com/momocow/tukiyomi/releases">下載</a></li>
       </ul>
     </nav>
   </div>
@@ -81,15 +108,10 @@
     <h4>最近文章</h4>
     <ul>
       
-        <li><a href="/post/2018/09/10/hello-world/">Hello, world!</a></li>
+        <li><a href="/blog/post/2018/09/10/hello-world/">Hello, TukiYomi!</a></li>
       
     </ul>
   </div>
-  
-    <div class="widget">
-      <h4>Welcome!</h4>
-<p>Hi! Welcome to my blog.</p>
-    </div>
   
 </div>
       </aside>
