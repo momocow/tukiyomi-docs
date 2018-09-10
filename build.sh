@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-. ./blog/build
+bash ./blog/build
