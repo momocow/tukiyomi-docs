@@ -18,7 +18,7 @@
           {% for entry in entries %}
             <tr {%- if entry.meta.language %} lang="{{ entry.meta.language }}" {%- endif %}>
               <td style="font-size: 85%">
-                <time>{{ entry.created.strftime('%Y.%m.%d %H%M%S') if entry.created else '' }}</time>
+                <time>{{ entry.created.strftime('%Y.%m.%d %H:%M:%S') if entry.created else '' }}</time>
               </td>
               <td><a href="{{ entry.url }}">{{ entry.title }}</a></td>
             </tr>

@@ -2,14 +2,14 @@
   <div class="meta">
     {% if entry.created %}
       <span>創建於
-        <time datetime="{{ entry.created.strftime('%Y-%m-%d %H:%M:%S') }}">{{ entry.created.strftime('%Y-%m-%d') }}</time></span>
+        <time datetime="{{ entry.created.strftime('%Y-%m-%d %H:%M:%S') }}">{{ entry.created.strftime('%Y-%m-%d %H:%M:%S') }}</time></span>
     {% endif %}
     {%- if entry.updated and entry.updated != entry.created -%}
       {%- if entry.created -%}
         <span>，</span>
       {%- endif -%}
       <span>更新於
-        <time datetime="{{ entry.updated.strftime('%Y-%m-%d %H:%M:%S') }}">{{ entry.updated.strftime('%Y-%m-%d') }}</time></span>
+        <time datetime="{{ entry.updated.strftime('%Y-%m-%d %H:%M:%S') }}">{{ entry.updated.strftime('%Y-%m-%d %H:%M:%S') }}</time></span>
     {% endif %}
     {% if entry.categories %}
       <br>
