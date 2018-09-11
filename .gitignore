@@ -1,5 +1,4 @@
-www/*
-!www/_redirects
+www
 
 # Logs
 logs

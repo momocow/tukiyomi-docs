@@ -1,7 +1,7 @@
 ---
 title: "Hello, TukiYomi!"
 created: 2018-09-10 11:54:51
-updated: 2018-09-10 23:00:00
+updated: 2018-09-11 20:55:00
 categories: Misc
 tags: [Hello]
 ---
@@ -12,7 +12,7 @@ tags: [Hello]
 
 🚧 WIP 🚧 前方施工 🚧
 
-![WIP](https://thumbs.gfycat.com/SpicyImmenseGraywolf-size_restricted.gif)
+![WIP](https://raw.githubusercontent.com/momocow/tukiyomi/52d3d71cacf1c33a1c2c84a2a3db28df3cfbaec1/docs/Ketsushoban.gif)
 
 ## 特色
 - [Vue](https://vuejs.org/) + [Typescript](https://www.typescriptlang.org) + [Electron](https://electronjs.org/)

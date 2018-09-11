@@ -9,9 +9,9 @@ themeConfig:
   activeHeaderLinks: false
   nav:
     - text: 日誌
-      link: /blog/
+      link: https://blog.tukiyomi.tw/
     - text: 下載
-      link: /downloads/
+      link: https://github.com/momocow/tukiyomi/releases/latest
     - text: GitHub
       link: https://github.com/momocow/tukiyomi/
   sidebar:
