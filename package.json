@@ -6,8 +6,9 @@
   "scripts": {
     "build:blog": "cd blog && bash build.sh && cd ..",
     "build:docs": "vuepress build docs",
+    "redirect": "cp _redirects www/_redirects",
     "dev:docs": "vuepress dev docs",
-    "build": "npm run build:docs && npm run build:blog"
+    "build": "npm run build:docs && npm run build:blog && npm run redirect"
   },
   "repository": {
     "type": "git",
