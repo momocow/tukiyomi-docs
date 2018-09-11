@@ -1,0 +1,16 @@
+@import "~animate.css/animate.min.css"
+
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+body *
+  font-family 'Microsoft YaHei'
+
+.hidden
+  visibility hidden
+
+.memo-delay
+  vendor('animation-delay', '0')
+  vendor('animation-duration', '1s')

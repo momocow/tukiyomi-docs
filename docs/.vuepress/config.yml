@@ -1,0 +1,17 @@
+title: "月夜海"
+description: "又。一個可擴展的 KanColle 專屬瀏覽器。"
+head:
+  - - link
+    - rel: icon
+      href: /favicon.ico
+dest: 'www'
+themeConfig:
+  activeHeaderLinks: false
+  nav:
+    - text: 日誌
+      link: /blog/
+    - text: 下載
+      link: /downloads/
+    - text: GitHub
+      link: https://github.com/momocow/tukiyomi/
+  sidebar:

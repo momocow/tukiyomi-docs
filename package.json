@@ -1,0 +1,35 @@
+{
+  "name": "tukiyomi-docs",
+  "version": "0.2.0",
+  "description": "Documents for TukiYomi",
+  "main": "index.js",
+  "scripts": {
+    "build:blog": "cd blog && bash build.sh && cd ..",
+    "build:docs": "vuepress build docs",
+    "dev:docs": "vuepress dev docs",
+    "build": "npm run build:docs && npm run build:blog"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/momocow/tukiyomi-docs.git"
+  },
+  "keywords": [
+    "docs",
+    "tukiyomi",
+    "kancolle",
+    "browser"
+  ],
+  "author": "MomoCow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/momocow/tukiyomi-docs/issues"
+  },
+  "homepage": "https://github.com/momocow/tukiyomi-docs#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "vuepress": "^0.14.2"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.0"
+  }
+}
