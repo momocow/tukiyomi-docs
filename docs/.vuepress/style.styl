@@ -5,12 +5,16 @@ vendor(prop, args)
   -moz-{prop} args
   {prop} args
 
-body *
+// @font-face
+//   font-family shigoto
+//   src url(/assets/font/ShigotoMemogaki.ttf)
+
+*
   font-family 'Microsoft YaHei'
 
 .hidden
   visibility hidden
 
 .memo-delay
-  vendor('animation-delay', '0')
-  vendor('animation-duration', '1s')
+  vendor('animation-delay', 0s)
+  vendor('animation-duration', 1s)
