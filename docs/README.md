@@ -14,10 +14,17 @@ footer: MIT Licensed | Copyright © 2018-present MomoCow
 ---
 
 <style>
+.home .hero {
+  position: relative;
+  margin-bottom: 100px;
+}
 .home .hero #memo {
   padding: 16px;
   margin-top: 24px;
   display: inline-block;
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 </style>
 
