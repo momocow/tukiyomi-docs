@@ -36,5 +36,10 @@ footer: MIT Licensed | Copyright © 2018-present MomoCow
 </ClientOnly>
 
 <ClientOnly>
-  <prerelease-warn />
+  <disclaimer />
 </ClientOnly>
+
+--------------
+
+<buy-me-a-coffee />
+

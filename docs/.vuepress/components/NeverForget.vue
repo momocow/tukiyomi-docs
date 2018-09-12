@@ -3,7 +3,9 @@
     <span class="hidden">忘れない。</span>
     <span class="hidden">忘れない。</span>
     <span class="hidden">ずっと。</span>
-    <a class="hidden" target="_blank" :href="lyric">―――《<u>月夜海</u>》</a>
+    <span class="hidden tukiyomi-lyric">
+      ―――<a target="_blank" :href="lyric">《<u>月夜海</u>》</a>
+    </span>
   </a>
 </template>
 
@@ -25,7 +27,7 @@ vendor(prop, args)
 .tukiyomi-memo {
   cursor pointer;
 }
-.tukiyomi-memo a {
+.tukiyomi-lyric, .tukiyomi-lyric * {
   color: cyan;
 }
 </style>
@@ -86,7 +88,6 @@ export default {
         this.fadeIn.bind(this, 2),
         1200,
         this.fadeIn.bind(this, 3),
-        1200,
         () => {
           this.lock = false
         }
