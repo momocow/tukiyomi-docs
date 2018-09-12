@@ -1,60 +1,103 @@
 <template>
-  <div></div>
+  <a class='tukiyomi-memo' ref='memo' target="_blank" @click="animate">
+    <span class="hidden">忘れない。</span>
+    <span class="hidden">忘れない。</span>
+    <span class="hidden">ずっと。</span>
+    <a class="hidden" target="_blank" :href="lyric">―――《<u>月夜海</u>》</a>
+  </a>
 </template>
+
+<style lang="stylus" scoped>
+.hidden
+  visibility hidden
+</style>
+
+<style lang="stylus">
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+.memo-animate
+  vendor('animation-delay', 0s)
+  vendor('animation-duration', 1s)
+
+.tukiyomi-memo {
+  cursor pointer;
+}
+.tukiyomi-memo a {
+  color: cyan;
+}
+</style>
+
 
 <script>
 export default {
   name: 'NeverForget',
-  mounted () {
-    let memo = document.getElementById('memo')
-    if (memo) {
-      memo.remove()
+  data () {
+    return {
+      lyric: 'https://gist.github.com/momocow/595b1e5805abb2b961820a29ea6a88b1#file-md'
     }
-
-    memo = document.createElement('a')
-    memo.id = 'memo'
-    memo.target = '_blank'
-    memo.href = 'https://gist.github.com/momocow/595b1e5805abb2b961820a29ea6a88b1#file-md'
-    memo.innerHTML = `
-    <span class="hidden">忘れない。</span>
-    <span class="hidden">忘れない。</span>
-    <span class="hidden">ずっと。</span>`
-
-    const animationEnd = (function(el) {
-      const animations = {
-        animation: 'animationend',
-        OAnimation: 'oAnimationEnd',
-        MozAnimation: 'mozAnimationEnd',
-        WebkitAnimation: 'webkitAnimationEnd',
-      };
-
-      for (let t in animations) {
-        if (el.style[t] !== undefined) {
-          return animations[t];
-        }
+  },
+  methods: {
+    run (schedule) {
+      /**
+       * @type {number|function}
+       */
+      let cur = schedule.shift()
+      while (typeof cur === 'function') {
+        cur()
+        cur = schedule.shift()
       }
-    })(document.createElement('div'));
 
-    function fadeInMsg (index) {
-      index = index || 0
-      const child = memo.children[index]
-      child.classList.remove('hidden')
-      child.classList.add('animated', 'fadeIn', 'memo-delay')
-      child.addEventListener(animationEnd, function () {
-        index++
-        if (index < memo.children.length) fadeInMsg(index)
-      },{
-        once: true
-      })
+      if (typeof cur === 'number') {
+        setTimeout(() => {
+          this.run(schedule)
+        }, cur)
+      }
+    },
+
+    reset (index) {
+      this.$refs.memo.children[index].classList.remove('memo-animate', 'animated', 'fadeIn')
+      this.$refs.memo.children[index].classList.add('hidden')
+    },
+
+    fadeIn (index) {
+      this.$refs.memo.children[index].classList.remove('hidden')
+      this.$refs.memo.children[index].classList.add('memo-animate', 'animated', 'fadeIn')
+    },
+
+    animate () {
+      if (this.lock) return
+      this.lock = true
+
+      // reset
+      this.reset(3)
+      this.reset(2)
+      this.reset(1)
+      this.reset(0)
+
+      const schedule = [
+        600,
+        this.fadeIn.bind(this, 0),
+        1200,
+        this.fadeIn.bind(this, 1),
+        1200,
+        this.fadeIn.bind(this, 2),
+        1200,
+        this.fadeIn.bind(this, 3),
+        1200,
+        () => {
+          this.lock = false
+        }
+      ]
+
+      this.run(schedule)
     }
-
-    const timer = setInterval(function appendMemo () {
-      try {
-        document.querySelector('.hero').appendChild(memo)
-        clearInterval(timer)
-        setTimeout(fadeInMsg, 600)
-      } catch (e) {}
-    }, 200)
+  },
+  mounted () {
+    document.querySelector('.hero').appendChild(this.$refs.memo)
+    this.animate()
   }
 }
 </script>
