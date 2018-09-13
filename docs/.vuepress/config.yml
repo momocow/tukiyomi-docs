@@ -10,6 +10,8 @@ themeConfig:
   nav:
     - text: 下載
       link: /download/
+    - text: 關於
+      link: /about/
     - text: 日誌
       link: https://blog.tukiyomi.tw/
     - text: GitHub
