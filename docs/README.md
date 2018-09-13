@@ -2,7 +2,7 @@
 home: true
 heroImage: /assets/img/tukiyomi_280x280.png
 actionText: KanColle。啟動
-actionLink: https://github.com/momocow/tukiyomi/releases/latest
+actionLink: /download/
 features:
 - title: 影音紀錄
   details: 斑黃的記憶在腦海中一幀一幀失去顏色, 不消多少日夜, 你便忘了輝煌曾經。月夜海能夠截錄遊戲中的聲影, 適時為你保留每一個重要時刻。
