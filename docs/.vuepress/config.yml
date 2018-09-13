@@ -1,19 +1,68 @@
-title: "月夜海"
-description: "又。一個可擴展的 KanColle 專屬瀏覽器。"
+title: TukiYomi
+description: Yet another scalable KanColle browser.
 head:
   - - link
     - rel: icon
       href: /favicon.ico
 dest: 'www'
+
+locales:
+  /tw/:
+    lang: zh-TW
+    title: 月夜海
+    description: "又。一個可擴展的 KanColle 專屬瀏覽器。"
+  /en/:
+    lang: en-US
+    title: TukiYomi
+    description: Yet another scalable KanColle browser.
+
 themeConfig:
   activeHeaderLinks: false
-  nav:
-    - text: 下載
-      link: /download/
-    - text: 關於
-      link: /about/
-    - text: 日誌
-      link: https://blog.tukiyomi.tw/
-    - text: GitHub
-      link: https://github.com/momocow/tukiyomi/
   sidebar:
+  locales:
+    /tw/:
+      selectText: 語言
+      label: 繁體中文
+      editLinkText: '在 GitHub 上編輯此頁'
+      serviceWorker: 
+        updatePopup:
+          message: "發現可用的內容更新！"
+          buttonText: "刷新"
+      nav:
+        - text: 核心程式
+          link: /tw/core/
+        - text: 插件
+          link: /tw/plugin/
+        - text: 開發者文件
+          link: /tw/dev/
+        - text: 下載
+          link: /tw/download/
+        - text: 關於
+          link: /tw/about/
+        - text: 日誌
+          link: https://blog.tukiyomi.tw/
+        - text: GitHub
+          link: https://github.com/momocow/tukiyomi/
+    /en/:
+      selectText: Languages
+      label: English
+      editLinkText: 'Edit this page on GitHub'
+      serviceWorker: 
+        updatePopup:
+          message: "New content is available."
+          buttonText: "Refresh"
+      nav:
+        - text: Core
+          link: /en/core/
+        - text: Plugin
+          link: /en/plugin/
+        - text: Development
+          link: /en/dev/
+        - text: Download
+          link: /en/download/
+        - text: About
+          link: /en/about/
+        - text: Blog
+          link: https://blog.tukiyomi.tw/
+        - text: GitHub
+          link: https://github.com/momocow/tukiyomi/

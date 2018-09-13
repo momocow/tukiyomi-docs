@@ -97,7 +97,12 @@ export default {
     }
   },
   mounted () {
-    document.querySelector('.hero').appendChild(this.$refs.memo)
+    const hero = document.querySelector('.hero')
+    const memo = hero.querySelector('.tukiyomi-memo')
+    if (memo) {
+      memo.remove()
+    }
+    hero.appendChild(this.$refs.memo)
     this.animate()
   }
 }
