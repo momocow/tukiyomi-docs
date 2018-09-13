@@ -27,7 +27,10 @@
   },
   "homepage": "https://github.com/momocow/tukiyomi-docs#readme",
   "devDependencies": {
+    "axios": "^0.18.0",
     "gulp": "^4.0.0",
+    "mri": "^1.1.1",
+    "semver": "^5.5.1",
     "vuepress": "^0.14.2"
   },
   "dependencies": {
