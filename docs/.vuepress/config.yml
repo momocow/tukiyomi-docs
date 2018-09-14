@@ -7,7 +7,7 @@ head:
 dest: 'www'
 
 locales:
-  /tw/:
+  /:
     lang: zh-TW
     title: 月夜海
     description: "又。一個可擴展的 KanColle 專屬瀏覽器。"
@@ -20,7 +20,7 @@ themeConfig:
   activeHeaderLinks: false
   sidebar:
   locales:
-    /tw/:
+    /:
       selectText: 語言
       label: 繁體中文
       editLinkText: '在 GitHub 上編輯此頁'
@@ -30,15 +30,15 @@ themeConfig:
           buttonText: "刷新"
       nav:
         - text: 核心程式
-          link: /tw/core/
+          link: /core/
         - text: 插件
-          link: /tw/plugin/
+          link: /plugin/
         - text: 開發者文件
-          link: /tw/dev/
+          link: /dev/
         - text: 下載
-          link: /tw/download/
+          link: /download/
         - text: 關於
-          link: /tw/about/
+          link: /about/
         - text: 日誌
           link: https://blog.tukiyomi.tw/
         - text: GitHub
