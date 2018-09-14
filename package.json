@@ -6,9 +6,15 @@
   "scripts": {
     "build:blog": "cd blog && bash build.sh && cd ..",
     "build:docs": "vuepress build docs",
-    "redirect": "cp _redirects www/_redirects",
+    "redirect": "rm -f www/_redirects && cp _redirects www/_redirects",
     "dev:docs": "vuepress dev docs",
-    "build": "npm run build:docs && npm run build:blog && npm run redirect"
+    "build": "npm run build:docs && npm run build:blog && npm run redirect",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   },
   "repository": {
     "type": "git",
@@ -28,6 +34,8 @@
   "homepage": "https://github.com/momocow/tukiyomi-docs#readme",
   "devDependencies": {
     "axios": "^0.18.0",
+    "commitizen": "^2.10.1",
+    "cz-customizable": "^5.2.0",
     "gulp": "^4.0.0",
     "mri": "^1.1.1",
     "semver": "^5.5.1",
