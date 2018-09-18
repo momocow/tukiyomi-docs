@@ -4,11 +4,12 @@
   "description": "Documents for TukiYomi",
   "main": "index.js",
   "scripts": {
+    "build:download": "node ./scripts/download/index.js momocow/tukiyomi",
     "build:blog": "cd blog && bash build.sh && cd ..",
     "build:docs": "vuepress build docs",
     "redirect": "rm -f www/_redirects && cp _redirects www/_redirects",
     "dev:docs": "vuepress dev docs",
-    "build": "npm run build:docs && npm run build:blog && npm run redirect",
+    "build": "npm run build:download && npm run build:docs && npm run build:blog && npm run redirect",
     "commit": "git-cz"
   },
   "config": {
@@ -33,10 +34,15 @@
   },
   "homepage": "https://github.com/momocow/tukiyomi-docs#readme",
   "devDependencies": {
+    "@iarna/toml": "^2.2.0",
     "axios": "^0.18.0",
+    "azuki": "^0.1.2",
+    "bytes": "^3.0.0",
     "commitizen": "^2.10.1",
     "cz-customizable": "^5.2.0",
+    "fs-extra": "^7.0.0",
     "gulp": "^4.0.0",
+    "lodash.pick": "^4.4.0",
     "mri": "^1.1.1",
     "semver": "^5.5.1",
     "vuepress": "^0.14.2"
