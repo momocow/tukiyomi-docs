@@ -98,10 +98,28 @@ function parseStable (releases) {
 }
 
 /**
+ * All head version according to the major version
  * @param {Array} releases
  */
 function parseAllReleases (releases) {
-  data.releases = releases.filter(r => r !== data.stable && r !== data.latest)
+  /**
+   * @type {Map<numebr, object>}
+   */
+  const majorMap = new Map()
+  releases.forEach(r => {
+    const major = semver.major(r.tag_name)
+    const latestMajor = majorMap.get(major)
+    if (!latestMajor || semver.gt(r.tag_name, latestMajor.tag_name)) {
+      majorMap.set(major, r)
+    }
+  })
+  if (data.latest) {
+    majorMap.delete(semver.major(data.latest.tag_name))
+  }
+  if (data.stable) {
+    majorMap.delete(semver.major(data.stable.tag_name))
+  }
+  data.releases = Array.from(majorMap.values())
   return releases
 }
 

@@ -7,13 +7,13 @@ span.blue {
 }
 </style>
 
-## {% disclaimer %}
+### {% disclaimer %}
 {% disclaimer_msg %}
 
-## {% stable_release %} <Badge text="{% recommended %}" type="tip" />
+### {% stable_release %} <Badge text="{% recommended %}" type="tip" />
 {%
   !stable ? '> {% unavailable %}'
-    : `### {% stable.tag_name %}
+    : `#### {% stable.tag_name %}
 > {% published_at %}: {% new Date(stable.published_at).toLocaleString() %}
 
 Windows
@@ -39,10 +39,10 @@ Linux
 %}`
 %}
 
-## {% latest_release %} {% latest && latest.prerelease_type ? '<Badge text="{% {% latest.prerelease_type %} %}" type="warn" />' : '' %}
+### {% latest_release %} {% latest && latest.prerelease_type ? '<Badge text="{% {% latest.prerelease_type %} %}" type="warn" />' : '' %}
 {%
   !latest ? '> {% unavailable %}'
-    : `### {% latest.tag_name %}
+    : `#### {% latest.tag_name %}
 > {% published_at %}: {% new Date(latest.published_at).toLocaleString() %}
 
 Windows
@@ -71,7 +71,7 @@ Linux
 ## {% all_releases %}
 {%
   !releases || releases.length === 0 ? '> {% unavailable %}'
-    : releases.map(r => `### ${r.tag_name}
+    : releases.map(r => `#### ${r.tag_name}
 > {% published_at %}: ${new Date(r.published_at).toLocaleString()}
 
 Windows

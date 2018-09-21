@@ -1,6 +1,6 @@
 {
   "name": "tukiyomi-docs",
-  "version": "0.2.0",
+  "version": "0.2.4",
   "description": "Documents for TukiYomi",
   "main": "index.js",
   "scripts": {
