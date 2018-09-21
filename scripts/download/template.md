@@ -68,7 +68,7 @@ Linux
 %}`
 %}
 
-## {% all_releases %}
+### {% all_releases %}
 {%
   !releases || releases.length === 0 ? '> {% unavailable %}'
     : releases.map(r => `#### ${r.tag_name}
