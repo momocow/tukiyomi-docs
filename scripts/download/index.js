@@ -56,15 +56,17 @@ function trimReleases (releases) {
           'size',
           'browser_download_url'
         )
-        asset.size = bytes(parseInt(asset.size))
+        asset.size = bytes(parseInt(asset.size), {
+          decimalPlaces: 1
+        })
         return asset
       })
       .filter(a => {
-        if (a.name.includes('-win.')) {
+        if (a.name.includes('-win.') && !a.name.endsWith('.yml') && !a.name.endsWith('.blockmap')) {
           a.platform = 'win32'
           return true
         }
-        if (a.name.includes('-linux.')) {
+        if (a.name.includes('-linux.') && !a.name.endsWith('.yml')) {
           a.platform = 'linux'
           return true
         }
