@@ -14,20 +14,6 @@ const {
 } = require('./config')
 const args = require('mri')(process.argv.slice(2))
 
-const WINDOWS_RELEASES = [
-  "-ia32-win.7z",
-  "-win.7z",
-  ".exe"
-]
-
-const LINUX_RELEASES = [
-  "-x86_64.AppImage",
-  ".7z",
-  ".pacman",
-  ".x86_64.rpm",
-  "_amd64.deb"
-]
-
 process.on('unhandledRejection', function (err) {
   console.error('Error!')
   console.error(err)
@@ -74,11 +60,11 @@ function trimReleases (releases) {
         return asset
       })
       .filter(a => {
-        if (WINDOWS_RELEASES.filter(win => a.name.endsWith(win)).length > 0) {
+        if (a.name.includes('-win.')) {
           a.platform = 'win32'
           return true
         }
-        if (LINUX_RELEASES.filter(linux => a.name.endsWith(linux)).length > 0) {
+        if (a.name.includes('-linux.')) {
           a.platform = 'linux'
           return true
         }
